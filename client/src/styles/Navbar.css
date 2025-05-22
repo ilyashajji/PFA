@@ -1,0 +1,65 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 16px;
+}
+
+.navbar-logo img {
+  height: 70px;
+  object-fit: contain;
+  transform: translateY(6px); 
+}
+
+
+.navbar-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 12px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-link {
+  color: #000;
+  font-weight: 500;
+}
+
+.navbar-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.navbar-notification-btn:hover {
+  background-color: rgba(0,0,0,0.04);
+}
+
+.navbar-avatar:hover {
+  transform: scale(1.05);
+}
+
+.navbar-dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.navbar-dropdown-menu .ant-dropdown-menu-item {
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-dropdown-menu .ant-dropdown-menu-item:hover {
+  background-color: rgba(0,0,0,0.04);
+}

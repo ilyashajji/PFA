@@ -1,0 +1,458 @@
+:root {
+  --primary-color: #1890ff;
+  --secondary-color: #52c41a;
+  --text-color: #333;
+  --text-secondary: #666;
+  --background-color: #fff;
+  --card-background: #ffffff;
+  --border-color: #e8e8e8;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #f5222d;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+.logo-top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;  /* Ajustez la taille du logo */
+  height: auto;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Layout styles */
+.layout-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.content-container {
+  padding: 24px;
+  margin-top: 64px;
+  margin-left: 200px;
+  transition: all 0.2s;
+}
+
+/* Card styles */
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+/* Button styles */
+.ant-btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Form styles */
+.ant-form-item-label > label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Table styles */
+.ant-table {
+  background-color: var(--card-background);
+  border-radius: 8px;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  margin-bottom: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-container {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
+
+/* Page d'accueil */
+.home-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1890ff 0%, #36cfc9 100%);
+  padding: 100px 24px;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  color: white !important;
+  font-size: 3rem !important;
+  margin-bottom: 24px !important;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+}
+
+.search-bar {
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.hero-stats .ant-statistic {
+  color: white;
+}
+
+.hero-stats .ant-statistic-title {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Sections */
+.section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 48px !important;
+}
+
+/* Cours */
+.course-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.course-image:hover .course-overlay {
+  opacity: 1;
+}
+
+.course-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Catégories */
+.categories-section {
+  background-color: #f5f7fa;
+}
+
+.category-card {
+  text-align: center;
+  padding: 24px;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+/* Témoignages */
+.testimonials-section {
+  background-color: #fff;
+}
+
+.testimonial-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px;
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #1890ff 0%, #36cfc9 100%);
+  padding: 100px 24px;
+  color: white;
+  text-align: center;
+}
+.navbar {
+  height: 64px;
+  line-height: 64px;
+}
+
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-section .ant-typography {
+  color: white !important;
+}
+
+.cta-section .ant-btn {
+  min-width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .section {
+    padding: 48px 24px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Page des cours */
+.courses-page {
+  padding: 24px;
+  background-color: var(--background-color);
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.courses-header .ant-typography {
+  color: var(--text-color);
+}
+
+.filters-card {
+  position: sticky;
+  top: 24px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.filters-card .ant-typography {
+  color: var(--text-color);
+}
+
+.course-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-image img {
+  transform: scale(1.1);
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.course-card:hover .course-overlay {
+  opacity: 1;
+}
+
+.course-overlay .ant-space {
+  width: 100%;
+  justify-content: center;
+}
+
+.course-overlay .ant-btn {
+  color: white;
+  border-color: white;
+}
+
+.course-overlay .ant-btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.course-overlay .ant-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.course-overlay .ant-btn-primary:hover {
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filters-card {
+    position: static;
+    margin-bottom: 24px;
+  }
+  
+  .course-image {
+    height: 150px;
+  }
+}
+
+/* Boutons améliorés */
+.action-button {
+  color: white !important;
+  font-size: 18px !important;
+  padding: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.action-button:hover {
+  transform: scale(1.2) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.view-course-button {
+  min-width: 120px !important;
+  height: 40px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.view-course-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4) !important;
+}
+
+/* Bouton de recherche */
+.ant-input-search .ant-input-group .ant-input-affix-wrapper {
+  border-radius: 4px 0 0 4px !important;
+}
+
+.ant-input-search .ant-input-group .ant-input-search-button {
+  border-radius: 0 4px 4px 0 !important;
+  height: 40px !important;
+}
+
+/* Bouton de réinitialisation */
+.ant-btn-default {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.ant-btn-default:hover {
+  background-color: rgba(24, 144, 255, 0.1) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+/* Sélecteur de tri */
+.ant-select-selector {
+  height: 40px !important;
+  border-radius: 4px !important;
+}
+
+.ant-select-selection-item {
+  line-height: 38px !important;
+}
+
+/* Bouton Explorer les cours */
+.explore-courses-button {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  min-width: 200px !important;
+  height: 48px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.explore-courses-button:hover {
+  background-color: #3cb371 !important;
+  border-color: #3cb371 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(82, 196, 26, 0.4) !important;
+} 
